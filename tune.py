@@ -21,7 +21,7 @@ TIME_FRAME = 5.0
 WIN_SIZE = 5
 q = Queue()
 
-class PowerSpectrum:
+class AvgPowerSpectrum:
 
     def __init__(self, window_size, ncomponents):
         self.pspecs = []
@@ -95,7 +95,7 @@ plt.draw()
 ln = None
 box = None
 
-avg_pspec = PowerSpectrum(WIN_SIZE, CHUNK + 1)
+avg_pspec = AvgPowerSpectrum(WIN_SIZE, CHUNK + 1)
 
 while stream.is_active():
     try:
